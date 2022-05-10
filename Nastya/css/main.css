@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Niramit:wght@500;600&family=Poppins:wght@200;300;400;500;600&display=swap');
+header {
+    width: 100%;
+    height: 626px;
+    background: url("/Nastya2/Nastya/img/main.jpg") no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    background-position: center;
+    padding: 0px;
+}
+
+.navbar_menu {
+    display: flex;
+    gap: 15%;
+    /* настроить расстояние между (названием сайта + иконкой) и выпадающем меню */
+    padding-top: 20px;
+    height: 150px;
+    justify-content: space-around;
+}
+
+.navbar_brand {
+    margin-top: 20px;
+    padding-top: -10px;
+}
+
+
+/*выпадающее меню, брал отсюда https: //html5book.ru/vypadayushee-menu/ */
+.navbar_toggle_menu {
+    padding-top: 25px;
+}
+
+nav {
+    text-align: center;
+    padding: 50px 0 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 600;
+
+}
+
+.topmenu>li {
+    display: inline-block;
+    position: relative;
+}
+
+.topmenu>li>a {
+    position: relative;
+    padding: 10px 15px;
+   
+    /*font-family: 'Kaushan Script', cursive;*/
+    font-size: 1.5em;
+    line-height: 1;
+    letter-spacing: 3px;
+}
+
+.topmenu>li>a:before {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: 100%;
+    width: 10px;
+    height: 10px;
+    background: #1C3352;
+    border-radius: 50%;
+    transform: translate(-50%, 20px);
+    opacity: 0;
+    transition: .3s;
+}
+
+.topmenu li:hover a:before {
+    transform: translate(-50%, 0);
+    opacity: 1;
+}
+
+.submenu {
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    top: 100%;
+    width: 150px;
+    padding: 15px 0 15px;
+    margin-top: 5px;
+    background: #1C3352;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, 20px);
+    transition: .3s;
+}
+
+.topmenu>li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.submenu a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    transition: .3s linear;
+}
+
+.submenu a:hover {
+    background: gray;
+}
+
+/* <!--------конец менюшки-----------!> */
+
+.first_travel_theme {
+    /* position: relative;
+    top: 8%; */
+    margin-top: 150px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.second_travel_theme {
+    margin-top: 180px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+/* <--------------- Конец header'a ---------------> */
+
+
+/* <--------------- Начало main секции ---------------> */
+.main_section {
+    margin: 0px;
+    width: 100%;
+    height: 1500px;
+    background-color: rgba(6, 18, 35, 0.9);
+    ;
+}
+
+.top_text {
+    font-size: 32px;
+    padding-top: 3%;
+    margin-left: 17%;
+    margin-bottom: 3%;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+/* <------------------ Форматирование фоток ----------> */
+
+
+/* Размеры фоток. grid-template-rows это как высота каждой фотки, grid-template-columns как ширина,
+чтобы поменять размеры фоток, нужно изменить размеры строк и столбцов и самих фоток в их классах(first_photo > a > img...)
+там где ширина или высота в два раза больше, фотка рстянута на два столбца/строки, размер считался как 2*ширину/высоту + gap
+gap - расстояние между фотками в grid таблице */
+
+.photos {
+    display: grid;
+
+    grid-template-areas: "post-1 post-1 post-2 post-3"
+        /* таблица представления фоток */
+        "post-4 post-5 post-2 post-3";
+    grid-template-rows: 250px 250px;
+    grid-template-columns: 265px 265px 265px 265px;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 180px;
+}
+
+.first_photo {
+    width: 545px;
+    height: 250px;
+    grid-area: post-1;
+
+   
+}
+
+.first_photo>a>img {
+    width: 545px;
+    height: 250px;
+    border-radius: 18px;
+}
+
+.second_photo {
+    width: 265px;
+    height: 515px;
+    grid-area: post-2;
+
+}
+
+.second_photo>a>img {
+    width: 265px;
+    height: 515px;
+    border-radius: 18px;
+}
+
+.third_photo {
+    width: 265px;
+    height: 515px;
+    grid-area: post-3;
+}
+
+.third_photo>a>img {
+    width: 265px;
+    height: 515px;
+    border-radius: 19px;
+}
+
+.fourth_photo {
+    width: 265px;
+    height: 250px;
+    grid-area: post-4;
+}
+
+.fourth_photo>a>img {
+    width: 265px;
+    height: 250px;
+    border-radius: 21px;
+}
+
+.fifth_photo {
+    width: 265px;
+    height: 250px;
+    grid-area: post-5;
+    
+}
+
+.fifth_photo>a>img {
+    width: 265px;
+    height: 250px;
+    border-radius: 18px;
+}
+
+.photo_text {
+    position: relative;
+    bottom: 90px;
+    left: 10px;
+    
+    
+}
+
+.photo_place {
+    color: rgba(255, 255, 255, 1);
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 33px;
+    opacity: 90%;
+}
+
+.photo_country {
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    opacity: 80%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+a.photo_link {
+    text-decoration: none;
+}
+
+img.galery {
+    z-index: auto;
+    opacity: 100%;
+    transition-property: opacity;
+}
+
+img.galery:hover {
+    /* прозрачность для фоток при наведении */
+    opacity: 50%;
+    transition-duration: .7s;
+}
+
+
+/* <------------------ Конец форматирования фоток ----------> */
+
+/* <------------------ Начало секции контакты ----------> */
+
+.contacts {
+    display: inline-block;
+    margin-left: 15%;
+}
+
+.contacts_text {
+    color: white;
+    font-size: 27px;
+    margin-bottom: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.contacts_rows {
+    margin-bottom: 15px;
+}
+
+.contacts_rows>div {
+    display: inline;
+}
+
+.contacts_icon {
+    margin-right: 10px;
+    padding-top: 10px;
+}
+
+.name_of_data {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.data {
+    color: rgb(180, 180, 180);
+    font-size: 19px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.map_div {
+    width: 35%;
+    height: 20%;
+    display: inline;
+    position: relative;
+    top: 55px;
+    margin-left: 100px;
+}
+
+.map {
+    width: 35%;
+    height: 20%;
+}
+
+/* <----------------- Конец main секции -------------------> */
+
+/* <----------------- Footer ------------------> */
+
+.footer {
+    display: inline-flex;
+    height: 0%;
+    width: 100%;
+    background-color: #133B5C;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    align-items:baseline;
+}
+
+.footer_brand {
+    margin-left: 150px;
+}
+.footer_adress {
+    margin-top: 2%;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+.footer_me{
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.3;
+    margin-left: 10%;
+}
+.footer_text {
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    line-height: 100%;
+    font-size: 15px;
+    font-weight: 400;
+   
+    margin-left: 150px;
+    padding-bottom: 20px;
+}
+
+/* <------------------ Медиа запросы -----------------------> */
+@media (max-width:720px) {
+    .footer{
+        flex-direction: column;
+    }
+    .footer_me {
+        margin-left: 150px;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+}
+
+
+@media (max-width: 720px) {
+    .photos {
+        display: grid;
+        grid-template-areas: "post-1 post-1"
+            "post-4 post-5"
+            "post-2 post-3"
+            "post-2 post-3";
+        grid-template-rows: 250px 250px 250px 250px;
+        grid-template-columns: 265px 265px;
+        gap: 15px;
+        justify-content: center;
+        margin-bottom: 180px;
+    }
+
+    .main_section {
+        margin: 0px;
+        width: 100%;
+        height: 2000px;
+        background-color: rgba(6, 18, 35, 0.9);
+    }
+    .first_travel_theme{
+        font-size: 40px;
+    }
+    .second_travel_theme{
+        font-size: 17px;
+    }
+    .top_text{
+        font-size: 25px;
+        text-align: center;
+        margin-left: auto;
+    }
+}
+
+@media (max-width:720px) {
+    .contacts {
+        display: block;
+        margin-left: 30%;
+    }
+
+    .map_div {
+        display: block;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .map {
+        width: 100%;
+        height: 75%;
+    }
+}

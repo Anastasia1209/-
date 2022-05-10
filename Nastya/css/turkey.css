@@ -1,0 +1,696 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Niramit:wght@500;600&family=Poppins:wght@200;300;400;500;600&display=swap");
+
+header {
+    width: 100%;
+    height: 626px;
+    background: url("/Nastya2/Nastya/img/main.jpg") no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    background-position: center;
+    padding: 0px;
+    margin: 0%;
+}
+
+.navbar_menu {
+    display: flex;
+    gap: 15%;
+    /* настроить расстояние между (названием сайта + иконкой) и выпадающем меню */
+    padding-top: 20px;
+    height: 150px;
+    justify-content: space-around;
+}
+
+.navbar_brand {
+    margin-top: 20px;
+    padding-top: -10px;
+}
+
+/*выпадающее меню, брал отсюда https: //html5book.ru/vypadayushee-menu/ */
+.navbar_toggle_menu {
+    padding-top: 25px;
+}
+
+nav {
+    text-align: center;
+    padding: 50px 0 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-weight: 600;
+}
+
+.topmenu > li {
+    display: inline-block;
+    position: relative;
+}
+
+.topmenu > li > a {
+    position: relative;
+    padding: 10px 15px;
+    /*font-family: 'Kaushan Script', cursive;*/
+    font-size: 1.5em;
+    line-height: 1;
+    letter-spacing: 3px;
+}
+
+.topmenu > li > a:before {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: 100%;
+    width: 10px;
+    height: 10px;
+    background: #1c3352;
+    border-radius: 50%;
+    transform: translate(-50%, 20px);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.topmenu li:hover a:before {
+    transform: translate(-50%, 0);
+    opacity: 1;
+}
+
+.submenu {
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    top: 100%;
+    width: 150px;
+    padding: 15px 0 15px;
+    margin-top: 5px;
+    background: #1c3352;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, 20px);
+    transition: 0.3s;
+}
+
+.topmenu > li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.submenu a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    transition: 0.3s linear;
+}
+
+.submenu a:hover {
+    background: gray;
+}
+
+/* <!--------конец менюшки-----------!> */
+
+.first_travel_theme {
+    /* position: relative;
+    top: 8%; */
+    margin-top: 150px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.second_travel_theme {
+    margin-top: 180px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+/* <--------------- Конец header'a ---------------> */
+
+/* <--------------- Начало main секции ---------------> */
+.main_section {
+    margin: 0px;
+    width: 100%;
+    height: 1100px;
+    background-color: rgba(6, 18, 35, 0.9);
+}
+
+.top_text {
+    font-size: 32px;
+    padding-top: 3%;
+    margin-left: 17%;
+    margin-bottom: 3%;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+/* <------------------ Форматирование фоток ----------> */
+
+.hotels {
+    display: grid;
+    height: auto;
+    grid-template-areas:
+        "hotel1 hotel2 hotel3"
+        "hotel4 hotel5 hotel6";
+    grid-template-rows: 280px 280px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 120px;
+    align-items: center;
+    margin: 0 20px 180px 2.5%;
+
+}
+
+.hotel1 {
+    width: 354px;
+    height: 212px;
+    grid-area: hotel1;
+}
+
+.hotel1 > a > img {
+    width: 360px;
+    height: 280px;
+    border-radius: 10px;
+}
+
+.hotel2 {
+    width: 354px;
+    height: 212px;
+    grid-area: hotel2;
+}
+
+.hotel2 > a > img {
+    width: 360px;
+    height: 280px;
+    border-radius: 10px;
+}
+
+.hotel3 {
+    width: 354px;
+    height: 212px;
+    grid-area: hotel3;
+}
+.hotel3 > a > img {
+    width: 360px;
+    height: 280px;
+    border-radius: 10px;
+}
+.hotel4 {
+    width: 354px;
+    height: 212px;
+    grid-area: hotel4;
+}
+.hotel4 > a > img {
+    width: 360px;
+    height: 280px;
+    border-radius: 10px;
+}
+.hotel5 {
+    width: 354px;
+    height: 212px;
+    grid-area: hotel5;
+}
+
+.hotel5 > a > img {
+    width: 360px;
+    height: 280px;
+    border-radius: 10px;
+}
+.hotel6 {
+    width: 354px;
+    height: 212px;
+    grid-area: hotel6;
+}
+
+.hotel6 > a > img {
+    width: 360px;
+    height: 280px;
+    border-radius: 10px;
+}
+a {
+    text-decoration: none;
+}
+a .hotel_name {
+    margin-top: 20px;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-weight: 600;
+    line-height: 1.5;
+}
+a .hotel_place {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-weight: 300;
+}
+
+/* Начало стилей  */
+.Window {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(22, 31, 51, 0.829); /* цвет фона */
+    z-index: 1050;
+    -webkit-transition: opacity 200ms ease-in;
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in;
+    display: none;
+    pointer-events: none;
+}
+
+.Window:target {
+    display: block;
+    pointer-events: auto;
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+
+.Window > div {
+    width: 1100px;
+    height: 650px;
+    position:relative;
+    margin: 3% auto;
+    padding: 20px;
+    border-radius: 5px;
+    background: rgba(140, 163, 197, 1);
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+/* свойства для кнопки "Закрыть" */
+.close {
+    float: right;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.5;
+    text-decoration: none;
+    position: absolute;
+    left: 97.7%;
+    top: 1%;
+}
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus,
+.close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.75;
+}
+/* ------- ЭЛЕМЕНТЫ ВНУТРИ МОДАЛЬНОГО ОКНА ----------*/
+.container {
+    display: grid;
+    grid-template-columns: 530px 550px;
+    grid-template-rows: 400px 400px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "photo_hotel about_hotel" 
+        "int_inf about_hotel";
+}
+
+.photo_hotel {
+    display: grid;
+    grid-template-columns: 550px;
+    grid-template-rows: 380px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ".";
+    grid-area: photo_hotel;
+}
+
+
+.about_hotel {
+    display: grid;
+    grid-template-columns: 570px;
+    grid-template-rows: 80px 80px 410px;
+    gap: 0px 0px;
+    grid-auto-flow: row ;
+    grid-template-areas:
+        "n_hotel "
+        "m_hotel"
+        "a_hotel"
+        ;
+    grid-area: about_hotel;
+}
+
+.n_hotel {
+    width: 500px;
+    grid-area: n_hotel; 
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    margin-left: 12%;
+    font-size: 1.5em;
+    line-height: 1.5;
+}
+
+.m_hotel {
+    grid-area: m_hotel; 
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1.25em;
+    margin-left: 11%;
+    line-height: 1.5;
+}
+
+.a_hotel {
+    grid-area: a_hotel;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    margin-top: 2%;
+    margin-left: 12%;
+    font-size: 1em;
+    line-height: 1.3;
+}
+#a_hotel4{
+    margin-top: -5%;
+}
+#a_hotel6{
+    margin-top: -4%;
+}
+
+.int_inf {
+    grid-area: int_inf;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+   margin-top: 2%;
+    font-size: 1em;
+    line-height: 1.3;
+}
+ul li {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+.int_inf ul {
+    margin-bottom: 5%;
+}
+
+img {
+    width: 560px;
+    height: 399px;
+    border-radius: 6px;
+}
+.int_inf span{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    margin-top: 5%;
+}
+
+
+/* ---- КОНЕЦ СВОЙСТВ ЭЛЕМЕНТОВ ВНУТРИ ОКНА ---- */
+
+/* Окончание стилей */
+
+/* <----------------- Footer ------------------> */
+
+.footer {
+    display: inline-flex;
+    height: 0%;
+    width: 100%;
+    background-color: #133B5C;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    align-items:baseline;
+}
+
+.footer_brand {
+    margin-left: 150px;
+}
+.footer_adress {
+    margin-top: 2%;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+.footer_me{
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.3;
+    margin-left: 10%;
+}
+.footer_text {
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    line-height: 100%;
+    font-size: 15px;
+    font-weight: 400;
+   
+    margin-left: 150px;
+    padding-bottom: 20px;
+}
+
+/* <------------------ Медиа запросы -----------------------> */
+@media screen and (min-width: 900px) and (max-width: 1350px) {
+    .hotels {
+        display: grid;
+        grid-template-areas:
+            "hotel1 hotel2"
+            "hotel3 hotel4"
+            "hotel5 hotel6";
+        grid-template-rows: 250px 250px 250px;
+        grid-template-columns: 330px 330px;
+        gap: 160px;
+        justify-content: center;
+        margin: auto;
+    }
+    .main_section {
+        margin: 0px;
+        width: 100%;
+        height: 1400px;
+        background-color: rgba(6, 18, 35, 0.9);
+    }
+}
+
+@media screen and (max-width:1350px) {
+    .container{
+        display: grid;
+        grid-template-areas: 
+        "about_hotel"
+        "photo_hotel"
+        "int_inf";
+        grid-template-columns: 550px;
+        grid-template-rows: auto;
+    }
+    .Window > div {
+        width: 620px;
+        height: 1260px;
+    }
+    #m3{
+        height: 1100px;
+    }
+    #m4{
+        height: 1000px;
+    }
+    #m5{
+        height: 1300px;
+    }
+    #m6{
+        height: 1200px;
+    }
+    .photo_hotel {
+        margin-left: 4.5%;
+    }
+    
+    .about_hotel {
+        margin-left: -5%;
+    }
+    .int_inf {
+        margin-left: 10%;
+    }
+    .close{
+        left: 95.5%;
+    }
+    #a_hotel6 {
+        margin-top: -5%;
+    }
+    #a_hotel4{
+        margin-bottom: 40%;
+    }
+    #a_hotel3 {
+        margin-bottom: -6%;
+    }
+    #m_hotel3{
+        margin-bottom: 5%;
+    }
+    #photo_hotel2 {
+        margin-top: 7%;
+    } 
+    #photo_hotel3{
+        margin-top: -12%;
+        margin-bottom: 4%;
+    }
+    #photo_hotel4{
+        margin-top: -40%;
+        margin-bottom: 5%;
+    }
+    #photo_hotel5{
+        margin-top: 15%;
+        margin-bottom: 5%;
+    }
+    #photo_hotel6{
+        margin-bottom: 5%;
+    }
+    #int_inf2{
+        margin-top: 6%;
+    }
+}
+/* <------------------ Медиа запросы -----------------------> */
+
+@media (max-width: 900px) {
+    .footer{
+        flex-direction: column;
+    }
+    .footer_me {
+        margin-left: 150px;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+    .hotels {
+        display: grid;
+        grid-template-areas:
+            "hotel1"
+            "hotel2"
+            "hotel3"
+            "hotel4"
+            "hotel5"
+            "hotel6";
+        grid-template-rows: 250px 250px 250px 250px 250px 250px;
+        grid-template-columns: 465px;
+        gap: 160px;
+        justify-content: center;
+        margin: auto;
+
+    }
+    .first_travel_theme{
+        font-size: 40px;
+    }
+    .second_travel_theme{
+        font-size: 17px;
+    }
+    .top_text{
+        font-size: 25px;
+        text-align: center;
+        margin-left: auto;
+    }
+    a figcaption.hotel_name {
+        text-decoration: none;
+        margin-top: 20px;
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        font-weight: 600;
+    }
+    a figcaption.hotel_place {
+        text-decoration: none;
+
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        font-weight: lighter;
+    }
+    .main_section {
+        margin: 0px;
+        width: 100%;
+        height: 2600px;
+        background-color: rgba(6, 18, 35, 0.9);
+    }
+    .hotel1 > a > img {
+        width: 460px;
+        height: 300px;
+    }
+    .hotel2 > a > img {
+        width: 460px;
+        height: 300px;
+    }
+    .hotel3 > a > img {
+        width: 460px;
+        height: 300px;
+    }
+    .hotel4 > a > img {
+        width: 460px;
+        height: 300px;
+    }
+    .hotel5 > a > img {
+        width: 460px;
+        height: 300px;
+    }
+    .hotel6 > a > img {
+        width: 460px;
+        height: 300px;
+    }
+}
+
+.slider{
+    max-width: 80%;
+    /* Положение элемента устанавливается относительно его исходной позиции: */
+    position: relative;
+    /* Центрируем по горизонтали: */
+    margin: 5px;
+    padding: 0px;
+    height: 400px;
+}
+
+/* Картинка масштабируется по отношению к родительскому элементу: */
+.slider .item img {
+    /* Элемент меняет размер так, чтобы заполнить блок и сохранить пропорции: */
+    object-fit: cover;
+    width: 560px;
+    height: 380px;
+    border-radius: 6px;
+}
+/* Кнопки назад и вперёд: */
+.slider .previous, .slider .next {
+    /* Добавляет курсору иконку, когда тот оказывается над кнопкой: */
+    cursor: pointer;
+    /* Положение элемента задаётся относительно границ браузера: */
+    position: absolute;
+    top: 47%;
+    width: auto;
+    margin-top: -22px;
+    padding: 10px;
+    /* Оформление самих кнопок: */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    /* Плавное появление фона при наведении курсора: */
+    transition: 0.6s ease;
+    /* Скругление границ: */
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
+    right: -120px;
+    border-radius: 3px 0 0 3px;
+    padding: 10px;
+}
+
+/* При наведении курсора на кнопки добавляем фон кнопок: */
+.slider .previous:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}

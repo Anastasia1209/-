@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Niramit:wght@500;600&family=Poppins:wght@200;300;400;500;600&display=swap');
+
+header {
+    width: 100%;
+    height: 626px;
+    background: url("/Nastya2/Nastya/img/main.jpg") no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    background-position: center;
+    padding: 0px;
+    margin: 0%;
+}
+
+.navbar_menu {
+    display: flex;
+    gap: 15%;
+    /* настроить расстояние между (названием сайта + иконкой) и выпадающем меню */
+    padding-top: 20px;
+    height: 150px;
+    justify-content: space-around;
+}
+
+.navbar_brand {
+    margin-top: 20px;
+    padding-top: -10px;
+}
+
+.icon {
+    margin-top: 20px;
+    display: inline-block;
+    background-color: white;
+    width: 50px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+/*Для название нужно подгрузить стили шрифта*/
+.brand_name {
+    display: inline-block;
+    font-family: "Niramit", sans-serif;
+    font-weight: 600;
+    color: white;
+    font-size: 33px;
+}
+
+/*выпадающее меню, брал отсюда https: //html5book.ru/vypadayushee-menu/ */
+.navbar_toggle_menu {
+    padding-top: 25px;
+}
+
+nav {
+    text-align: center;
+    padding: 50px 0 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-weight: 600;
+}
+
+.topmenu > li {
+    display: inline-block;
+    position: relative;
+}
+
+.topmenu > li > a {
+    position: relative;
+    padding: 10px 15px;
+    /*font-family: 'Kaushan Script', cursive;*/
+    font-size: 1.5em;
+    line-height: 1;
+    letter-spacing: 3px;
+}
+
+.topmenu > li > a:before {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: 100%;
+    width: 10px;
+    height: 10px;
+    background: #1c3352;
+    border-radius: 50%;
+    transform: translate(-50%, 20px);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.topmenu li:hover a:before {
+    transform: translate(-50%, 0);
+    opacity: 1;
+}
+
+.submenu {
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    top: 100%;
+    width: 150px;
+    padding: 15px 0 15px;
+    margin-top: 5px;
+    background: #1c3352;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, 20px);
+    transition: 0.3s;
+}
+
+.topmenu > li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.submenu a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    transition: 0.3s linear;
+}
+
+.submenu a:hover {
+    background: gray;
+}
+
+/* <!--------конец менюшки-----------!> */
+
+.first_travel_theme {
+    /* position: relative;
+    top: 8%; */
+    margin-top: 150px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.second_travel_theme {
+    margin-top: 180px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+/* <--------------- Конец header'a ---------------> */
+
+/* <--------------- Начало main секции ---------------> */
+.main_section {
+    margin: 0px;
+    width: 100%;
+    height: 1500px;
+    background-color: rgba(6, 18, 35, 0.9);
+}
+
+.top_text {
+    font-size: 32px;
+    padding-top: 3%;
+    margin-left: 17%;
+    margin-bottom: 3%;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+/* <------------------ Форматирование фоток ----------> */
+
+.hotels {
+    display: grid;
+
+    grid-template-areas:
+        "hotel1 hotel2 hotel3"
+        "hotel4 hotel5 hotel6";
+    grid-template-rows: 280px 280px;
+    grid-template-columns: 354px 354px 354px;
+    gap: 130px;
+    align-items: center;
+    margin-bottom: 180px;
+    margin-left: 85px;
+}
+
+.hotel1 {
+    width: 354px;
+    height: 212px;
+    grid-area: hotel1;
+}
+
+.hotel1 > a > img {
+    width: 360px;
+    height: 280px;
+    border-radius: 10px;
+    
+}
+
+.hotel2 {
+    width: 354px;
+    height: 212px;
+    grid-area: hotel2;
+}
+
+.hotel2 > a > img {
+    width: 360px;
+    height: 280px;
+    border-radius: 10px;
+}
+
+.hotel3 {
+    width: 354px;
+    height: 212px;
+    grid-area: hotel3;
+}
+.hotel3 > a > img {
+    width: 360px;
+    height: 280px;
+    border-radius: 10px;
+}
+.hotel4 {
+    width: 354px;
+    height: 212px;
+    grid-area: hotel4;
+}
+.hotel4 > a > img {
+    width: 360px;
+    height: 280px;
+    border-radius: 10px;
+}
+.hotel5 {
+    width: 354px;
+    height: 212px;
+    grid-area: hotel5;
+}
+
+.hotel5 > a > img {
+    width: 360px;
+    height: 280px;
+    border-radius: 10px;
+}
+.hotel6 {
+    width: 354px;
+    height: 212px;
+    grid-area: hotel6;
+}
+
+.hotel6 > a > img {
+    width: 360px;
+    height: 280px;
+    border-radius: 10px;
+    
+}
+
+a .hotel_name {
+    text-decoration: none;
+    margin-top: 20px;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-weight: 600;
+    line-height: 1.5;
+}
+a .hotel_place {
+    text-decoration: none;
+
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-weight: 30;
+}
+/*-------------- МОДАЛЬНОЕ ОКНО ----------------- */
+/* стилизация содержимого страницы */
+body {
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #292b2c;
+    background-color: #fff;
+} 
+  
+/* свойства модального окна по умолчанию */
+.modal {
+    position: fixed; /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(22, 31, 51, 0.829); /* цвет фона */
+    z-index: 1050;
+    opacity: 0; /* по умолчанию модальное окно прозрачно */
+    -webkit-transition: opacity 200ms ease-in; 
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in; /* анимация перехода */
+    pointer-events: none; /* элемент невидим для событий мыши */
+    margin: 0;
+    padding: 0;
+}
+/* при отображении модального окно */
+.modal:target {
+    opacity: 1; /* делаем окно видимым */
+	  pointer-events: auto; /* элемент видим для событий мыши */
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+    display: block;
+}
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog {
+    position: relative;
+    width: 1000px;
+    margin: 30px;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+      max-width: 500px;
+      margin: 30px auto; /* для отображения модального окна по центру */
+  }
+}
+/* свойства для блока, содержащего контент модального окна */ 
+.modal-content {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: rgba(140, 163, 197, 1);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+   
+}
+@media (min-width: 768px) {
+  .modal-content {
+      -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+      box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  }
+}
+/* свойства для заголовка модального окна */
+.modal-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 15px;
+    
+}
+.modal-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+/* свойства для кнопки "Закрыть" */
+.close {
+    float: right;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    text-decoration: none;
+}
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus, .close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .75;
+}
+/* свойства для блока, содержащего основное содержимое окна */
+.modal-body {
+  position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 15px;
+    overflow: auto;
+}
+
+/* <----------------- Footer ------------------> */
+
+footer {
+    height: 10%;
+    background-color: #133B5C;
+}
+
+.footer_brand {
+    padding-top: 50px;
+    margin-left: 150px;
+}
+
+.footer_text {
+    color: white;
+    line-height: 100%;
+    font-size: 25px;
+    font-weight: 400;
+    padding-top: 50px;
+    margin-left: 150px;
+    padding-bottom: 20px;
+}
+/* <------------------ Медиа запросы -----------------------> */
+
+@media (max-width: 1200px) {
+    .hotels {
+        display: grid;
+        grid-template-areas:
+            "hotel1"
+            "hotel2"
+            "hotel3"
+            "hotel4"
+            "hotel5"
+            "hotel6";
+        grid-template-rows: 250px 250px 250px 250px 250px 250px;
+        grid-template-columns: 265px;
+        gap: 70px;
+        justify-content: center;
+        margin-bottom: 180px;
+    }
+    a figcaption.hotel_name {
+        text-decoration: none;
+        margin-top: 20px;
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        font-weight: 600;
+    }
+    a figcaption.hotel_place {
+        text-decoration: none;
+
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        font-weight: lighter;
+    }
+    .main_section {
+        margin: 0px;
+        width: 100%;
+        height: 2000px;
+        background-color: rgba(6, 18, 35, 0.9);
+    }
+    .top_text {
+        font-size: 32px;
+        text-align: center;
+        color: white;
+        font-family: "Montserrat", sans-serif;
+    }
+}
