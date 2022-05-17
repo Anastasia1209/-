@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Niramit:wght@500;600&family=Poppins:wght@200;300;400;500;600&display=swap");
+header {
+    width: 100%;
+    height: 626px;
+    background: url("/Nastya2/Nastya/img/main.jpg") no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    background-position: center;
+    padding: 0px;
+}
+
+.navbar_menu {
+    display: flex;
+    gap: 15%;
+    /* настроить расстояние между (названием сайта + иконкой) и выпадающем меню */
+    padding-top: 20px;
+    height: 150px;
+    justify-content: space-around;
+}
+
+.navbar_brand {
+    margin-top: 20px;
+    padding-top: -10px;
+}
+
+/*выпадающее меню, брал отсюда https: //html5book.ru/vypadayushee-menu/ */
+.navbar_toggle_menu {
+    padding-top: 25px;
+}
+
+nav {
+    text-align: center;
+    padding: 50px 0 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-weight: 600;
+}
+
+.topmenu > li {
+    display: inline-block;
+    position: relative;
+}
+
+.topmenu > li > a {
+    position: relative;
+    padding: 10px 15px;
+
+    /*font-family: 'Kaushan Script', cursive;*/
+    font-size: 1.5em;
+    line-height: 1;
+    letter-spacing: 3px;
+}
+
+.topmenu > li > a:before {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: 100%;
+    width: 10px;
+    height: 10px;
+    background: #1c3352;
+    border-radius: 50%;
+    transform: translate(-50%, 20px);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.topmenu li:hover a:before {
+    transform: translate(-50%, 0);
+    opacity: 1;
+}
+
+.submenu {
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    top: 100%;
+    width: 150px;
+    padding: 15px 0 15px;
+    margin-top: 5px;
+    background: #1c3352;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, 20px);
+    transition: 0.3s;
+}
+
+.topmenu > li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.submenu a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    transition: 0.3s linear;
+}
+
+.submenu a:hover {
+    background: gray;
+}
+
+/* <!--------конец менюшки-----------!> */
+
+.first_travel_theme {
+    /* position: relative;
+    top: 8%; */
+    margin-top: 150px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.second_travel_theme {
+    margin-top: 180px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+/* <--------------- Конец header'a ---------------> */
+
+/* <--------------- Начало main секции ---------------> */
+.main_section {
+    margin: 0px;
+    width: 100%;
+    height: 900px;
+    background-color: rgba(6, 18, 35, 0.9);
+}
+
+.top_text {
+    font-size: 32px;
+    padding-top: 3%;
+    margin-left: 17%;
+    margin-bottom: 3%;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+.first_text {
+    font-size: 25px;
+    padding-top: 3%;
+    margin-left: 7%;
+    margin-bottom: 3%;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+.second_text {
+    font-size: 20px;
+    padding-top: 3%;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 3%;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+.rassylka {
+    margin-top: 5%;
+}
+.ras_text {
+    font-size: 25px;
+    padding-top: 3%;
+    margin-left: 7%;
+    margin-bottom: 2%;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+.ras_text2 {
+    font-size: 20px;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 3%;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+.ras {
+    margin: 0 10% 0 10%;
+}
+#name,
+#mail {
+    width: 40%;
+    height: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    border: white solid;
+    border-radius: 5px;
+}
+.buttom {
+    width: 15%;
+    height: 56.8px;
+    background-color: #71a6eb;
+    color: white;
+    border: white solid 0px;
+    border-radius: 5px;
+    vertical-align: bottom;
+}
+.butt {
+    display: inline;
+}
+
+/* Начало стилей  */
+.WindowUs {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(22, 31, 51, 0.829); /* цвет фона */
+    z-index: 1050;
+    -webkit-transition: opacity 200ms ease-in;
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in;
+    display: none;
+    pointer-events: none;
+}
+
+.WindowUs:target {
+    display: block;
+    pointer-events: auto;
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+
+.WindowUs > div {
+    width: 500px;
+    height: 130px;
+    position: relative;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    background: rgba(140, 163, 197, 1);
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+.open {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 8%;
+}
+.open2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+/* свойства для кнопки "Закрыть" */
+.closeUs {
+    float: right;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.5;
+    text-decoration: none;
+    position: absolute;
+    left: 95%;
+    top: 3%;
+}
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.closeUs:focus,
+.closeUs:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.75;
+}
+/* <----------------- Footer ------------------> */
+
+.footer {
+    display: inline-flex;
+    height: 0%;
+    width: 100%;
+    background-color: #133b5c;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    align-items: baseline;
+}
+
+.footer_brand {
+    margin-left: 150px;
+}
+.footer_adress {
+    margin-top: 2%;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+}
+.footer_me {
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.3;
+    margin-left: 10%;
+}
+.footer_text {
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    line-height: 100%;
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 150px;
+    padding-bottom: 20px;
+}
+
+/* <------------------ Медиа запросы -----------------------> */
+@media (max-width: 720px) {
+    .footer {
+        flex-direction: column;
+    }
+    .footer_me {
+        margin-left: 150px;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+    .main_section {
+        margin: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(6, 18, 35, 0.9);
+    }
+    .first_travel_theme {
+        font-size: 40px;
+    }
+    .second_travel_theme {
+        font-size: 17px;
+    }
+    .top_text {
+        font-size: 25px;
+        text-align: center;
+        margin-left: auto;
+    }
+    #name,
+    #mail {
+        width: 70%;
+        display: block;
+        margin: 0 0 2% 13%;
+    }
+    .butt {
+        margin-left: 13%;
+    }
+    .buttom{
+        width: 71.6%;
+        margin-bottom: 5%;
+
+    }
+}
