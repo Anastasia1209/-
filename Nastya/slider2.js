@@ -1,40 +1,40 @@
 /* Устанавливаем стартовый индекс слайда по умолчанию: */
 let slideIndex2 = 1;
 /* Вызываем функцию, которая реализована ниже: */
-showSlides(slideIndex2);
+showSlides2(slideIndex2);
 
 /* Увеличиваем индекс на 1 — показываем следующий слайд: */
-function nextSlide() {
-    showSlides(slideIndex2 += 1);
+function nextSlide2() {
+    showSlides2(slideIndex2 += 1);
 }
 
 /* Уменьшаем индекс на 1 — показываем предыдущий слайд: */
-function previousSlide() {
-    showSlides(slideIndex2 -= 1);
+function previousSlide2() {
+    showSlides2(slideIndex2 -= 1);
 }
 
 /* Устанавливаем текущий слайд: */
-function currentSlide(n) {
-    showSlides(slideIndex2 = n);
+function currentSlide2(n) {
+    showSlides2(slideIndex2 = n);
 }
 
 /* Функция перелистывания: */
-function showSlides(n) {
+function showSlides2(n) {
     /* Обращаемся к элементам с названием класса "item", то есть к картинкам: */
-    let slides = document.getElementsByClassName("item2");
+    let slides2 = document.getElementsByClassName("item2");
 
     /* Проверяем количество слайдов: */
-    if (n > slides.length) {
+    if (n > slides2.length) {
       slideIndex2 = 1
     }
     if (n < 1) {
-        slideIndex2 = slides.length
+        slideIndex2 = slides2.length
     }
 
     /* Проходим по каждому слайду в цикле for: */
-    for (let slide of slides) {
+    for (let slide of slides2) {
         slide.style.display = "none";
     }
     /* Делаем элемент блочным: */
-    slides[slideIndex2 - 1].style.display = "block";
+    slides2[slideIndex2 - 1].style.display = "block";
 }

@@ -23,8 +23,7 @@ header {
     padding-top: -10px;
 }
 
-
-/*выпадающее меню, брал отсюда https: //html5book.ru/vypadayushee-menu/ */
+/*выпадающее меню, брала отсюда https: //html5book.ru/vypadayushee-menu/ */
 .navbar_toggle_menu {
     padding-top: 25px;
 }
@@ -190,8 +189,6 @@ gap - расстояние между фотками в grid таблице */
     width: 545px;
     height: 250px;
     grid-area: post-1;
-
-   
 }
 
 .first_photo>a>img {
@@ -240,8 +237,7 @@ gap - расстояние между фотками в grid таблице */
 .fifth_photo {
     width: 265px;
     height: 250px;
-    grid-area: post-5;
-    
+    grid-area: post-5; 
 }
 
 .fifth_photo>a>img {
@@ -254,8 +250,6 @@ gap - расстояние между фотками в grid таблице */
     position: relative;
     bottom: 90px;
     left: 10px;
-    
-    
 }
 
 .photo_place {
@@ -292,7 +286,6 @@ img.galery:hover {
     opacity: 50%;
     transition-duration: .7s;
 }
-
 
 /* <------------------ Конец форматирования фоток ----------> */
 
@@ -397,19 +390,8 @@ img.galery:hover {
 }
 
 /* <------------------ Медиа запросы -----------------------> */
-@media (max-width:720px) {
-    .footer{
-        flex-direction: column;
-    }
-    .footer_me {
-        margin-left: 150px;
-        margin-top: 3%;
-        margin-bottom: 3%;
-    }
-}
 
-
-@media (max-width: 720px) {
+@media  (max-width: 1130px){
     .photos {
         display: grid;
         grid-template-areas: "post-1 post-1"
@@ -417,17 +399,24 @@ img.galery:hover {
             "post-2 post-3"
             "post-2 post-3";
         grid-template-rows: 250px 250px 250px 250px;
-        grid-template-columns: 265px 265px;
+        grid-template-columns: 215px 215px;
         gap: 15px;
+        column-gap: 65px;
         justify-content: center;
         margin-bottom: 180px;
     }
-
     .main_section {
-        margin: 0px;
-        width: 100%;
-        height: 2000px;
-        background-color: rgba(6, 18, 35, 0.9);
+        height: 2500px;
+    }
+}
+@media  (max-width: 900px){
+    .footer{
+        flex-direction: column;
+    }
+    .footer_me {
+        margin-left: 150px;
+        margin-top: 3%;
+        margin-bottom: 3%;
     }
     .first_travel_theme{
         font-size: 40px;
@@ -441,8 +430,74 @@ img.galery:hover {
         margin-left: auto;
     }
 }
-
 @media (max-width:720px) {
+    .footer_me {
+        margin-left: 100px;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+    .footer_text {
+        margin-left: 100px;
+    }
+    .svg {
+        margin-left: -50px;
+    }
+}
+@media (max-width:600px){
+    .photos {
+        display: grid;
+        grid-template-areas: "post-1"
+            "post-2"
+            "post-3"
+            "post-4"
+            "post-5";
+        grid-template-rows: 250px 250px 250px 250px 250px;
+        grid-template-columns: 215px;
+        gap: 15px;
+        justify-content: center;
+        margin-bottom: 180px;
+    }
+    #galery1,
+    #galery2,
+    #galery3 {
+        width: 265px;
+        height: 250px;
+    }
+    .photo_place{
+        width: 250px;
+        font-size: 19px;
+    }
+    .photo_text,
+    .photo_link,
+    .first_photo{
+        width: 265px;
+    }
+    
+    .main_section {
+        margin: 0px;
+        width: 100%;
+        height: 3000px;
+        background-color: rgba(6, 18, 35, 0.9);
+    }
+}
+@media (max-width: 420px) {
+    .main_section {
+        margin: 0px;
+        width: 100%;
+        height: 2500px;
+        background-color: rgba(6, 18, 35, 0.9);
+    }
+    .first_travel_theme{
+        font-size: 40px;
+    }
+    .second_travel_theme{
+        font-size: 17px;
+    }
+    .top_text{
+        font-size: 25px;
+        text-align: center;
+        margin-left: auto;
+    }
     .contacts {
         display: block;
         margin-left: 30%;
@@ -458,4 +513,20 @@ img.galery:hover {
         width: 100%;
         height: 75%;
     }
+    .footer{
+        flex-direction: column;
+    }
+    
+    .footer_me {
+        margin-left: 100px;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+    .footer_text{
+        margin-left: 100px;
+    }
+    .svg{
+        margin-left: -50px;
+    }
 }
+

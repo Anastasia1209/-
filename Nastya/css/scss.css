@@ -32,7 +32,7 @@ nav {
   nav a {
     text-decoration: none;
     display: block;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: white;
     font-weight: 600; }
 
@@ -83,7 +83,7 @@ nav {
   transform: translate(-50%, 20px);
   transition: .3s; }
   .submenu a {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 15px;
     letter-spacing: 1px;
@@ -95,7 +95,7 @@ nav {
 .first_travel_theme {
   margin-top: 150px;
   color: white;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 50px;
   text-align: center;
   font-weight: 800; }
@@ -103,7 +103,7 @@ nav {
 .second_travel_theme {
   margin-top: 180px;
   font-weight: 500;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: white;
   font-size: 25px;
   text-align: center; }
@@ -120,7 +120,7 @@ nav {
   margin-left: 17%;
   margin-bottom: 3%;
   color: white;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500; }
 
 .photos {
@@ -133,7 +133,7 @@ nav {
   margin-bottom: 180px; }
 
 .first_photo {
-  max-width: 545px;
+  width: 545px;
   height: 250px;
   grid-area: post-1; }
   .first_photo > a > img {
@@ -142,7 +142,7 @@ nav {
     border-radius: 18px; }
 
 .second_photo {
-  max-width: 265px;
+  width: 265px;
   height: 515px;
   grid-area: post-2; }
   .second_photo > a > img {
@@ -151,7 +151,7 @@ nav {
     border-radius: 18px; }
 
 .third_photo {
-  max-width: 265px;
+  width: 265px;
   height: 515px;
   grid-area: post-3; }
   .third_photo > a > img {
@@ -160,7 +160,7 @@ nav {
     border-radius: 19px; }
 
 .fourth_photo {
-  max-width: 265px;
+  width: 265px;
   height: 250px;
   grid-area: post-4; }
   .fourth_photo > a > img {
@@ -169,7 +169,7 @@ nav {
     border-radius: 21px; }
 
 .fifth_photo {
-  max-width: 265px;
+  width: 265px;
   height: 250px;
   grid-area: post-5; }
   .fifth_photo > a > img {
@@ -185,7 +185,7 @@ nav {
 .photo_place {
   color: white;
   font-size: 22px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   line-height: 33px;
   opacity: 90%; }
@@ -196,7 +196,7 @@ nav {
   font-weight: 500;
   line-height: 24px;
   opacity: 80%;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300; }
 
 a.photo_link {
@@ -218,7 +218,7 @@ img.galery {
   color: white;
   font-size: 27px;
   margin-bottom: 50px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600; }
 
 .contacts_rows {
@@ -234,12 +234,12 @@ img.galery {
   color: white;
   font-size: 20px;
   font-weight: 500;
-  font-family: "Montserrat", sans-serif; }
+  font-family: 'Montserrat', sans-serif; }
 
 .data {
   color: #b4b4b4;
   font-size: 19px;
-  font-family: "Montserrat", sans-serif; }
+  font-family: 'Montserrat', sans-serif; }
 
 .map_div {
   width: 35%;
@@ -270,19 +270,19 @@ img.galery {
   color: white;
   font-size: 15px;
   font-weight: 400;
-  font-family: "Montserrat", sans-serif; }
+  font-family: 'Montserrat', sans-serif; }
 
 .footer_me {
   color: white;
   font-size: 15px;
   font-weight: 400;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.3;
   margin-left: 10%; }
 
 .footer_text {
   font-weight: 400;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: white;
   line-height: 100%;
   font-size: 15px;
@@ -290,7 +290,20 @@ img.galery {
   margin-left: 150px;
   padding-bottom: 20px; }
 
-@media (max-width: 720px) {
+@media (max-width: 1130px) {
+  .photos {
+    display: grid;
+    grid-template-areas: "post-1 post-1" "post-4 post-5" "post-2 post-3" "post-2 post-3";
+    grid-template-rows: 250px 250px 250px 250px;
+    grid-template-columns: 215px 215px;
+    gap: 15px;
+    column-gap: 65px;
+    justify-content: center;
+    margin-bottom: 180px; }
+
+  .main_section {
+    height: 2500px; } }
+@media (max-width: 900px) {
   .footer {
     flex-direction: column; }
 
@@ -298,6 +311,85 @@ img.galery {
     margin-left: 150px;
     margin-top: 3%;
     margin-bottom: 3%; }
+
+  .first_travel_theme {
+    font-size: 40px; }
+
+  .second_travel_theme {
+    font-size: 17px; }
+
+  .top_text {
+    font-size: 25px;
+    text-align: center;
+    margin-left: auto; } }
+@media (max-width: 720px) {
+  .footer_me {
+    margin-left: 100px;
+    margin-top: 3%;
+    margin-bottom: 3%; }
+
+  .footer_text {
+    margin-left: 100px; }
+
+  .svg {
+    margin-left: -50px; } }
+@media (max-width: 600px) {
+  .photos {
+    display: grid;
+    grid-template-areas: "post-1" "post-2" "post-3" "post-4" "post-5";
+    grid-template-rows: 250px 250px 250px 250px 250px;
+    grid-template-columns: 215px;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 180px; }
+
+  #galery1 {
+    width: 265px;
+    height: 250px; }
+
+  #galery2 {
+    width: 265px;
+    height: 250px; }
+
+  #galery3 {
+    width: 265px;
+    height: 250px; }
+
+  .photo_place {
+    width: 250px;
+    font-size: 19px; }
+
+  .photo_text {
+    width: 265px; }
+
+  .photo_link {
+    width: 265px; }
+
+  .first_photo {
+    width: 265px; }
+
+  .main_section {
+    margin: 0px;
+    width: 100%;
+    height: 3000px;
+    background-color: rgba(6, 18, 35, 0.9); } }
+@media (max-width: 420px) {
+  .main_section {
+    margin: 0px;
+    width: 100%;
+    height: 2500px;
+    background-color: rgba(6, 18, 35, 0.9); }
+
+  .first_travel_theme {
+    font-size: 40px; }
+
+  .second_travel_theme {
+    font-size: 17px; }
+
+  .top_text {
+    font-size: 25px;
+    text-align: center;
+    margin-left: auto; }
 
   .contacts {
     display: block;
@@ -310,32 +402,20 @@ img.galery {
 
   .map {
     width: 100%;
-    height: 75%; } }
-@media (max-width: 720px) {
-  .photos {
-    display: grid;
-    grid-template-areas: "post-1 post-1" "post-4 post-5" "post-2 post-3" "post-2 post-3";
-    grid-template-rows: 250px 250px 250px 250px;
-    grid-template-columns: 265px 265px;
-    gap: 15px;
-    justify-content: center;
-    margin-bottom: 180px; }
+    height: 75%; }
 
-  .main_section {
-    margin: 0px;
-    width: 100%;
-    height: 2000px;
-    background-color: rgba(6, 18, 35, 0.9); }
+  .footer {
+    flex-direction: column; }
 
-  .first_travel_theme {
-    font-size: 40px; }
+  .footer_me {
+    margin-left: 100px;
+    margin-top: 3%;
+    margin-bottom: 3%; }
 
-  .second_travel_theme {
-    font-size: 17px; }
+  .footer_text {
+    margin-left: 100px; }
 
-  .top_text {
-    font-size: 25px;
-    text-align: center;
-    margin-left: auto; } }
+  .svg {
+    margin-left: -50px; } }
 
 /*# sourceMappingURL=scss.css.map */

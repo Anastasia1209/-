@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<hotels>
+    <hotel>
+        <img>img\турция1.jpg</img>
+        <name>Sundia By Liberty 5*</name>
+        <place>отель в Фетхие (побережье Эгейского моря) </place>
+    </hotel>
+    <hotel>
+        <img>img\турция2.jpg</img>
+        <name>Blue Marlin 4*</name>
+        <place>отель в Алании</place> 
+    </hotel>
+
+     <hotel>
+        <img>img\турция3.jpg</img>
+        <name>Alarcha 5*</name>
+        <place>отель в Сиде (Манавгат)</place>
+    </hotel>
+ <hotel>
+        <img>img\турция4.jpg</img>
+        <name>Maxeria Blue Didyma 5*</name>
+        <place>в Дидиме (побережье Эгейского моря)</place>
+    </hotel>
+     <hotel>
+        <img>img\турция5.jpg</img>
+        <name>Nirvana Cosmopolitan 5*</name>
+        <place>отель в Анталье (Лара)</place>
+    </hotel>
+      <hotel>
+        <img>img\турция6.jpg</img>
+        <name>Ela Excellence 5*</name>
+        <place>отель в Белеке</place>
+    </hotel>
+</hotels>

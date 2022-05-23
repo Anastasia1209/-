@@ -184,7 +184,13 @@ nav a {
     grid-area: hotel1;
 }
 
-.hotel1 > a > img {
+.hotel1 > a > img,
+.hotel2 > a > img,
+.hotel3 > a > img,
+.hotel4 > a > img,
+.hotel5 > a > img,
+.hotel6 > a > img
+ {
     width: 360px;
     height: 280px;
     border-radius: 10px;
@@ -196,54 +202,30 @@ nav a {
     grid-area: hotel2;
 }
 
-.hotel2 > a > img {
-    width: 360px;
-    height: 280px;
-    border-radius: 10px;
-}
-
 .hotel3 {
     width: 354px;
     height: 212px;
     grid-area: hotel3;
 }
-.hotel3 > a > img {
-    width: 360px;
-    height: 280px;
-    border-radius: 10px;
-}
+
 .hotel4 {
     width: 354px;
     height: 212px;
     grid-area: hotel4;
 }
-.hotel4 > a > img {
-    width: 360px;
-    height: 280px;
-    border-radius: 10px;
-}
+
 .hotel5 {
     width: 354px;
     height: 212px;
     grid-area: hotel5;
 }
 
-.hotel5 > a > img {
-    width: 360px;
-    height: 280px;
-    border-radius: 10px;
-}
 .hotel6 {
     width: 354px;
     height: 212px;
     grid-area: hotel6;
 }
 
-.hotel6 > a > img {
-    width: 360px;
-    height: 280px;
-    border-radius: 10px;
-}
 a {
     text-decoration: none;
 }
@@ -260,63 +242,6 @@ a .hotel_place {
     font-weight: 300;
 }
 
-/* Начало стилей  */
-.Window {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(22, 31, 51, 0.829); /* цвет фона */
-    z-index: 1050;
-    -webkit-transition: opacity 200ms ease-in;
-    -moz-transition: opacity 200ms ease-in;
-    transition: opacity 200ms ease-in;
-    display: none;
-    pointer-events: none;
-}
-
-.Window:target {
-    display: block;
-    pointer-events: auto;
-    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
-}
-
-.Window > div {
-    width: 1100px;
-    height: 650px;
-    position:relative;
-    margin: 3% auto;
-    padding: 20px;
-    border-radius: 5px;
-    background: rgba(140, 163, 197, 1);
-    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.5);
-    color: #fff;
-}
-
-/* свойства для кнопки "Закрыть" */
-.close {
-    float: right;
-    font-family: sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 1;
-    color: #000;
-    text-shadow: 0 1px 0 #fff;
-    opacity: 0.5;
-    text-decoration: none;
-    position: absolute;
-    left: 97.7%;
-    top: 1%;
-}
-/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
-.close:focus,
-.close:hover {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-    opacity: 0.75;
-}
 /* ------- ЭЛЕМЕНТЫ ВНУТРИ МОДАЛЬНОГО ОКНА ----------*/
 .container {
     display: grid;
@@ -434,7 +359,63 @@ img {
     font-weight: 300;
     margin-top: 5%;
 }
+/* Начало стилей  */
+.Window {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(22, 31, 51, 0.829); /* цвет фона */
+    z-index: 1050;
+    -webkit-transition: opacity 200ms ease-in;
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in;
+    display: none;
+    pointer-events: none;
+}
 
+.Window:target {
+    display: block;
+    pointer-events: auto;
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+
+.Window > div {
+    width: 1100px;
+    height: 650px;
+    position: relative;
+    margin: 3% auto;
+    padding: 20px;
+    border-radius: 5px;
+    background: rgba(140, 163, 197, 1);
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+/* свойства для кнопки "Закрыть" */
+.close {
+    float: right;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.5;
+    text-decoration: none;
+    position: absolute;
+    left: 97.7%;
+    top: 1%;
+}
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus,
+.close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.75;
+}
 /* ---- КОНЕЦ СВОЙСТВ ЭЛЕМЕНТОВ ВНУТРИ ОКНА ---- */
 
 /* Окончание стилей */
@@ -482,7 +463,7 @@ img {
 }
 
 /* <------------------ Медиа запросы -----------------------> */
-@media screen and (min-width: 900px) and (max-width: 1350px) {
+@media screen and (min-width: 900px) and (max-width: 1200px) {
     .hotels {
         display: grid;
         grid-template-areas:
@@ -503,7 +484,7 @@ img {
     }
 }
 
-@media screen and  (max-width: 1350px) {
+@media screen and  (max-width: 1200px) {
     .container{
         display: grid;
         grid-template-areas: 
@@ -572,7 +553,6 @@ img {
 @media (max-width: 900px) {
     .footer{
         flex-direction: column;
-        
     }
     .footer_me {
         margin-left: 150px;
@@ -626,77 +606,138 @@ img {
         height: 2600px;
         background-color: rgba(6, 18, 35, 0.9);
     }
-    .hotel1 > a > img {
-        width: 460px;
-        height: 300px;
-    }
-    .hotel2 > a > img {
-        width: 460px;
-        height: 300px;
-    }
-    .hotel3 > a > img {
-        width: 460px;
-        height: 300px;
-    }
-    .hotel4 > a > img {
-        width: 460px;
-        height: 300px;
-    }
-    .hotel5 > a > img {
-        width: 460px;
-        height: 300px;
-    }
+    .hotel1 > a > img,
+    .hotel2 > a > img,
+    .hotel3 > a > img,
+    .hotel4 > a > img,
+    .hotel5 > a > img,
     .hotel6 > a > img {
         width: 460px;
         height: 300px;
     }
 }
+@media (max-width:660px) {
+    
+    .container{
+        display: grid;
+        grid-template-areas: 
+        "about_hotel"
+        "photo_hotel"
+        "int_inf";
+        grid-template-columns: 340px;
+        grid-template-rows: auto;
+    }
+    
+    .about_hotel {
+        display: grid;
+        grid-template-columns: 340px;
+        grid-template-rows: auto;
+        gap: 0px 0px;
+        grid-auto-flow: row ;
+        grid-template-areas:
+            "n_hotel "
+            "m_hotel"
+            "a_hotel"
+            ;
+        grid-area: about_hotel;
+    }
+    .n_hotel {
+        width: 340px;
+    }
+    .Window > div {
+        width: 400px;
+        height: 1700px;
+    }
+}
+@media (max-width:460px ) {
+    .hotel1 > a > img,
+    .hotel2 > a > img,
+    .hotel3 > a > img,
+    .hotel4 > a > img,
+    .hotel5 > a > img,
+    .hotel6 > a > img {
+        
+       position: relative;
+        width: 100%;
+        height: 250px;
+        margin-left: 14%;
+    }
+    .hotel_name, 
+    .hotel_place{
+        margin-left: 15%;
+    }
+    .footer{
+        flex-direction: column;
+    }
+    
+    .footer_me {
+        margin-left: 100px;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+    .footer_text{
+        margin-left: 100px;
+    }
+    .svg{
+        margin-left: -50px;
+    }
+    .container{
+        display: grid;
+        grid-template-areas: 
+        "about_hotel"
+        "photo_hotel"
+        "int_inf";
+        grid-template-columns: 340px;
+        grid-template-rows: auto;
+    }
+    
+    .about_hotel {
+        display: grid;
+        grid-template-columns: 340px;
+        grid-template-rows: auto;
+        gap: 0px 0px;
+        grid-auto-flow: row ;
+        grid-template-areas:
+            "n_hotel "
+            "m_hotel"
+            "a_hotel"
+            ;
+        grid-area: about_hotel;
+    }
+    .n_hotel {
+        width: 320px;
+    }
+    .Window > div {
+        width: 340px;
+        height: 1700px;
+    }
+    
+    #photo_hotel1{
+        margin-top: -2%;
+    }
+    #m_hotel2{
+        margin-bottom: 3%;
+    }
+    #m3,
+    #m4,
+    #m5,
+    #m6{
+        height: auto;
+    }
+    #photo_hotel3{
+        margin-top: 2%;
+    }
+    #m_hotel4{
+        margin-bottom: 7%;
+    }
+    #photo_hotel4{
+        margin-top: -1%;
+    }
+    #photo_hotel6{
+        margin-top: -1%;
+    }
+    .close{
+        left: 93%;
+    }
 
-.slider{
-    max-width: 80%;
-    /* Положение элемента устанавливается относительно его исходной позиции: */
-    position: relative;
-    /* Центрируем по горизонтали: */
-    margin: 5px;
-    padding: 0px;
-    height: 400px;
-}
-
-/* Картинка масштабируется по отношению к родительскому элементу: */
-.slider .item img {
-    /* Элемент меняет размер так, чтобы заполнить блок и сохранить пропорции: */
-    object-fit: cover;
-    width: 560px;
-    height: 380px;
-    border-radius: 6px;
-}
-/* Кнопки назад и вперёд: */
-.slider .previous, .slider .next {
-    /* Добавляет курсору иконку, когда тот оказывается над кнопкой: */
-    cursor: pointer;
-    /* Положение элемента задаётся относительно границ браузера: */
-    position: absolute;
-    top: 47%;
-    width: auto;
-    margin-top: -22px;
-    padding: 10px;
-    /* Оформление самих кнопок: */
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    /* Плавное появление фона при наведении курсора: */
-    transition: 0.6s ease;
-    /* Скругление границ: */
-    border-radius: 0 3px 3px 0;
-}
-.slider .next {
-    right: -120px;
-    border-radius: 3px 0 0 3px;
-    padding: 10px;
-}
-
-/* При наведении курсора на кнопки добавляем фон кнопок: */
-.slider .previous:hover,
-.slider .next:hover {
-    background-color: rgba(0, 0, 0, 0.4);
 }
